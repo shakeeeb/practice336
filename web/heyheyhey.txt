@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Yeezus",
+        "swagLevel": 100000,
+        "special": "holy shit this nigga fuckin crazy"
+    },
+    {
+        "name": "A$AP Rocky",
+        "swagLevel": 3000,
+        "special": "a$ap mob"
+    },
+    {
+        "name": "Lil B",
+        "swagLevel": 4000,
+        "special": "ellen degeneres"
+    },
+    {
+        "name": "yung lean",
+        "swagLevel": 300,
+        "special": "rapping about gatorade and pokemon cards"
+    },
+    {
+        "name": "Waka Flocka Flame",
+        "swagLevel": 1000,
+        "special": "brick squad makes you dumber"
+    },
+    {
+        "name": "OG Maco",
+        "swagLevel": 1500,
+        "special": "FUCKEM FUCKEM WOOHOO YEAH YEAH FUCKEM FUCKEM FUCKEM"
+    }
+]

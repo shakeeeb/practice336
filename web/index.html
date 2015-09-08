@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ey nigga where's my money</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-2.1.4.min.js"></script> 
+        <script> 
+        // so now my goal s to write a script that iterates through my json
+        // and tells me individually about each of my rappers
+        var rapperDirectory;
+        var url = "heyheyhey.txt";
+        var index = 0;
+        var max = 0;
+        $(document).ready( function() {
+            console.log("IM READY");
+            $(this).hide();
+            // parse json here
+            $.getJSON( url, function(data){
+                rapperDirectory = data;
+                console.log(rapperDirectory);
+                console.log("tryna get rappers");
+                console.log(rapperDirectory[0].name);
+                max = rapperDirectory.length;
+                console.log(max);
+            }); 
+            $('#nextRapper').click(function()
+            {
+                getNextRapper();
+            });
+            $('#submitRapper').click(function ()
+            {
+                submitRapper();        
+            });
+            
+        });
+        function getNextRapper(){
+            //console.log("not functional yet");
+            if(index >= max){
+                // gotta place a div that says no rappers left
+                var s = $('<div>').attr("id", "buttDiv");
+                s.text("there are no more rappers left");
+                $('#buttDiv').replaceWith(s);
+                return;
+            }
+            if(index < max){
+                var r = $('<div>').attr("id", "buttDiv");
+                r.text(rapperDirectory[index].name +  rapperDirectory[index].swagLevel +  rapperDirectory[index].special);
+                $('#buttDiv').replaceWith(r);
+                index++;
+                return;
+            }
+        }
+        function submitRapper(){
+            console.log("hey isnt functional yet bruh");
+            // what happens when you submit a rapper?
+            // it takes the rapper, and passes the name into a servlet
+            // the servlet takes the name and generates a page with the image of the rapper
+            // use a leading slash to reference from the root directory
+        }
+        </script>
+    </head>
+    <body>
+        <div id = "buttDiv"> 
+        <p> there is currently no rapper present</p>
+        </div>
+        <button type="button" id="nextRapper">next Rapper</button>
+        <button type="button" id="submitRapper">submit Rapper</button>
+    </body>
+</html>
